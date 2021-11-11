@@ -25,7 +25,7 @@ const DashBoard = () => {
             </div>
             <div className='dashboard'>
                 <div class="relative bg-white dark:bg-gray-800">
-                    <div class="flex flex-col sm:flex-row sm:justify-between">
+                    <div class="flex flex-col sm:flex-row sm:justify-around ">
                         <div class="lg:w-72 h-screen bg-blue-100">
                             <div class="flex items-center justify-start mx-6 mt-10">
 
