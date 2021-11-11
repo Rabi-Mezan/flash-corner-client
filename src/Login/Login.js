@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import { Link, useHistory } from 'react-router-dom';
-import useFirebase from '../hooks/useFirebase';
+import useAuth from '../hooks/useAuth';
 import Header from '../Shared/Header/Header';
 
 
 const Login = () => {
 
     const [loginData, setLoginData] = useState({})
-    const { loginUser } = useFirebase()
+    const { loginUser } = useAuth()
     const history = useHistory()
 
     const handleOnBlur = e => {
