@@ -13,6 +13,7 @@ import MakeAdmin from './MakeAdmin/MakeAdmin';
 import ManageOrders from './ManageOrders/ManageOrders';
 import ManageProducts from './ManageProducts/ManageProducts';
 import useAuth from '../../hooks/useAuth';
+import AdminRoute from '../../AdminRoute/AdminRoute';
 
 const DashBoard = () => {
     let { path, url } = useRouteMatch();
@@ -110,20 +111,20 @@ const DashBoard = () => {
                 <div>
                     <Switch>
                         <Route exact path={path}>
-                            <h3>Please select a topic.</h3>
-                        </Route>
-                        <Route path={`${path}/addProduct`}>
-                            <AddProducts></AddProducts>
-                        </Route>
-                        <Route path={`${path}/manageOrders`}>
-                            <ManageOrders></ManageOrders>
-                        </Route>
-                        <Route path={`${path}/manageProducts`}>
                             <ManageProducts></ManageProducts>
                         </Route>
-                        <Route path={`${path}/makeAdmin`}>
+                        <AdminRoute path={`${path}/addProduct`}>
+                            <AddProducts></AddProducts>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/manageOrders`}>
+                            <ManageOrders></ManageOrders>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/manageProducts`}>
+                            <ManageProducts></ManageProducts>
+                        </AdminRoute>
+                        <AdminRoute path={`${path}/makeAdmin`}>
                             <MakeAdmin></MakeAdmin>
-                        </Route>
+                        </AdminRoute>
 
                     </Switch>
                 </div>
