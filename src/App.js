@@ -5,6 +5,7 @@ import DashBoard from './DashBoard/DashBoard/DashBoard';
 import Home from './Home/Home/Home';
 import Login from './Login/Login';
 import Register from './Register/Register';
+import Shop from './Shop/Shop';
 
 
 
@@ -20,6 +21,9 @@ function App() {
             </Route>
             <Route path='/home'>
               <Home></Home>
+            </Route>
+            <Route path='/shopNow'>
+              <Shop></Shop>
             </Route>
             <Route path='/login'>
               <Login></Login>
