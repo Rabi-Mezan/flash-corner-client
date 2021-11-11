@@ -1,8 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import useFirebase from '../../hooks/useFirebase';
 import logo from '../../images/Group 1.png'
 
 const Header = () => {
+
+    const { user, logOut } = useFirebase();
     return (
         <div>
 
@@ -35,10 +38,20 @@ const Header = () => {
                                     <div class="ml-3 relative">
                                         <div class="relative inline-block text-left">
                                             <div>
-                                                <button type="button" class="  flex items-center justify-center w-full rounded-md  px-4 py-2 text-sm font-medium
-                                                bg-white hover:bg-gray-300 " id="options-menu">
-                                                    Login
-                                                </button>
+                                                {
+                                                    user.email ? <Link to='/login'>
+                                                        <button onClick={logOut} type="button" class="  flex items-center justify-center w-full rounded-md  px-4 py-2 text-sm font-medium
+                                               bg-white hover:bg-gray-300 " id="options-menu">
+                                                            Logout
+                                                        </button>
+                                                    </Link> :
+                                                        <Link to='/login'>
+                                                            <button type="button" class="  flex items-center justify-center w-full rounded-md  px-4 py-2 text-sm font-medium
+                                            bg-white hover:bg-gray-300 " id="options-menu">
+                                                                Login
+                                                            </button>
+                                                        </Link>
+                                                }
                                             </div>
 
                                         </div>
