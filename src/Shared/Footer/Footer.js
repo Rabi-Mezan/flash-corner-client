@@ -48,10 +48,12 @@ const Footer = () => {
                                 </li>
                             </nav>
                         </div>
-                        <div class="lg:w-1/4 md:w-1/2 w-full px-4">
+                        <div class="lg:w-1/4 md:w-1/2 w-full px-4 ">
+                            <h1 className='ml-4 title-font font-bold text-white tracking-widest text-md mb-3'>NEWSLETTER</h1>
+                            <p className='ml-4 text-xs text-white'>Sing up stay tuned! Be the 1st to know about our news and updates!</p>
                             <form class="m-4 lg:flex ">
                                 <input class="lg:rounded-l-lg p-4 border-t mr-0  border-b border-l sm:border-r text-gray-800 border-gray-200 bg-white" placeholder="your@mail.com" />
-                                <button class="px-8 lg:rounded-r-lg bg-yellow-400  text-gray-800 font-bold p-4 uppercase border-yellow-500 border-t border-b  border-r">Subscribe</button>
+                                <button class="lg:px-8 lg:rounded-r-lg bg-yellow-400  text-gray-800 font-bold lg:p-4 p-2  uppercase border-yellow-500 border-t border-b  border-r">Subscribe</button>
                             </form>
 
                         </div>
