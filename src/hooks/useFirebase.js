@@ -45,14 +45,8 @@ const useFirebase = () => {
     // email password login
     const loginUser = (email, password) => {
         setIsLoading(true)
-        signInWithEmailAndPassword(auth, email, password)
-            .then((userCredential) => {
+        return signInWithEmailAndPassword(auth, email, password)
 
-            })
-            .catch((error) => {
-
-            })
-            .finally(() => setIsLoading(false));
     }
 
     useEffect(() => {
@@ -107,6 +101,7 @@ const useFirebase = () => {
         registerUser,
         loginUser,
         IsLoading,
+        setIsLoading,
         admin,
         logOut
     }

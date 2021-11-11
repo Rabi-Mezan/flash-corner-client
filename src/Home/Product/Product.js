@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 const Product = ({ product }) => {
-    const { name, description, price, img } = product
+    const { _id, name, description, price, img } = product
     return (
 
         <div class="lg:flex items-center justify-items-start p-10 w-full h-full bg-white">
@@ -19,7 +19,7 @@ const Product = ({ product }) => {
                         <h2 class="text-3xl">{price} BDT</h2>
                         <p class="text-lg text-gray-500	">{description}</p>
                         <div class="flex items-center gap-4 my-6 cursor-pointer ">
-                            <Link to='/buynow'>
+                            <Link to={`/buyNow/${_id}`}>
                                 <button class="bg-pink-500 hover:bg-blue-600 px-5 py-3 text-white rounded-lg w-full text-center">Buy Now</button>
                             </Link>
 

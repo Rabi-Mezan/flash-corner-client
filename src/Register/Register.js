@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import Success from '../AlertCompo/Success/Success';
 import useAuth from '../hooks/useAuth';
 import Header from '../Shared/Header/Header';

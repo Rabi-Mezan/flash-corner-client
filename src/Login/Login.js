@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useHistory } from 'react-router-dom';
+import { Link, useHistory, useLocation } from 'react-router-dom';
 import useAuth from '../hooks/useAuth';
 import Header from '../Shared/Header/Header';
 
@@ -7,8 +7,12 @@ import Header from '../Shared/Header/Header';
 const Login = () => {
 
     const [loginData, setLoginData] = useState({})
-    const { loginUser } = useAuth()
+    const { loginUser, setIsLoading } = useAuth()
+    const location = useLocation();
     const history = useHistory()
+
+
+    const redirectUrl = location?.state?.from
 
     const handleOnBlur = e => {
         const field = e.target.name
@@ -21,7 +25,14 @@ const Login = () => {
 
     const handleLogin = e => {
         loginUser(loginData.email, loginData.password)
-        history.push('/')
+            .then((userCredential) => {
+                history.push(redirectUrl)
+
+            })
+            .catch((error) => {
+
+            })
+            .finally(() => setIsLoading(false));
         e.preventDefault()
     }
 

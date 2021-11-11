@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Banner = () => {
     return (
@@ -21,9 +22,9 @@ const Banner = () => {
                                 Dimension of reality that makes change possible and understandable. An indefinite and homogeneous environment in which natural events and human existence take place.
                             </p>
                             <div class="flex  m-auto">
-                                <a href="/" class="uppercase py-2 px-4 rounded-lg bg-pink-500 border-2 border-transparent text-white text-md mr-4 hover:bg-blue-500">
+                                <Link to="/shopNow" class="uppercase py-2 px-4 rounded-lg bg-pink-500 border-2 border-transparent text-white text-md mr-4 hover:bg-blue-500">
                                     Shop Now
-                                </a>
+                                </Link>
                                 <a href="/" class="uppercase py-2 px-4 rounded-lg bg-transparent border-2  text-pink-500 dark:text-white hover:bg-blue-500 hover:text-white text-md">
 
                                     Learn More

@@ -24,7 +24,7 @@ function App() {
             <Route path='/home'>
               <Home></Home>
             </Route>
-            <Route path='/shopNow'>
+            <Route path='/shopNow/'>
               <Shop></Shop>
             </Route>
             <Route path='/login'>
@@ -33,7 +33,7 @@ function App() {
             <Route path='/register'>
               <Register></Register>
             </Route>
-            <PrivateRoute path='/buynow'>
+            <PrivateRoute path='/buynow/:id'>
               <BuyNow></BuyNow>
             </PrivateRoute>
             <Route path='/dashboard'>

@@ -32,7 +32,7 @@ const AddProducts = () => {
             }
             <form className='lg:flex lg:flex-col m-auto lg:w-2/3 w-full  addproducts' onSubmit={handleSubmit(onSubmit)}>
                 <input placeholder='product name' {...register("name")} />
-                <input placeholder='description' {...register("description")} />
+                <input className='' style={{ height: '80px' }} placeholder='description' {...register("description")} />
                 <input placeholder='price' type="number" {...register("price")} />
                 <input placeholder='image link'  {...register("img")} />
                 <input placeholder='' type="submit" />
