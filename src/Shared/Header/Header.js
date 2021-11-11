@@ -27,6 +27,11 @@ const Header = () => {
                                             Shop Now
                                         </Link>
 
+                                        {
+                                            user.email && <Link class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-md font-medium" to='/dashboard'>
+                                                Dashboard
+                                            </Link>
+                                        }
                                         <Link class="text-gray-300  hover:text-gray-800 dark:hover:text-white px-3 py-2 rounded-md text-md font-medium" to='/contact'>
                                             Contact
                                         </Link>
