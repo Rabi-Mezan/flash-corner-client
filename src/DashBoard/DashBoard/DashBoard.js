@@ -6,7 +6,8 @@ import {
     Switch,
     Route,
     Link,
-    useRouteMatch
+    useRouteMatch,
+    useHistory
 } from "react-router-dom";
 import AddProducts from './AddProducts/AddProducts';
 import MakeAdmin from './MakeAdmin/MakeAdmin';
@@ -20,8 +21,13 @@ import Review from './Review/Review';
 
 const DashBoard = () => {
     let { path, url } = useRouteMatch();
-    const { admin } = useAuth();
+    const { admin, logOut } = useAuth();
+    const history = useHistory()
 
+    const handleLogout = () => {
+        logOut()
+        history.push('/home')
+    }
     return (
         <div>
             <div className='bg-gray-600 h-24'>
@@ -37,6 +43,14 @@ const DashBoard = () => {
 
                             </div>
                             <nav class="mt-10 lg:px-6 ">
+                                <Link to='/home' class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " >
+
+                                    <span class="lg:mx-4 lg:text-lg text-xs font-normal">
+                                        Home
+                                    </span>
+                                    <span class="flex-grow text-right">
+                                    </span>
+                                </Link>
                                 {
                                     admin ? <div>
                                         <Link to={`${url}/addProduct`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " >
@@ -99,7 +113,7 @@ const DashBoard = () => {
 
                                         </div>
                                 }
-                                < button class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors  dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " >
+                                < button onClick={handleLogout} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors  dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " >
 
                                     <span class="lg:mx-4 lg:text-lg text-xs font-normal">
                                         Logout
@@ -114,7 +128,11 @@ const DashBoard = () => {
                 <div>
                     <Switch>
                         <Route exact path={path}>
-                            <ManageProducts></ManageProducts>
+                            {
+                                admin ? <ManageProducts></ManageProducts>
+                                    :
+                                    <MyOrders></MyOrders>
+                            }
                         </Route>
                         <AdminRoute path={`${path}/addProduct`}>
                             <AddProducts></AddProducts>

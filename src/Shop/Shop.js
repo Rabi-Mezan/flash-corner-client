@@ -28,7 +28,7 @@ const Shop = () => {
                     </button>
                 </div>
             </div>
-            <div className='grid lg:grid-cols-2 md:grid-cols-1 '>
+            <div className='grid lg:grid-cols-3 md:grid-cols-1 '>
                 {
                     products.map(product =>
 

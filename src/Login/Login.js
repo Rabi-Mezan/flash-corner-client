@@ -12,7 +12,7 @@ const Login = () => {
     const history = useHistory()
 
 
-    const redirectUrl = location?.state?.from
+    const redirectUrl = location?.state?.from || '/home'
 
     const handleOnBlur = e => {
         const field = e.target.name
