@@ -14,6 +14,9 @@ import ManageOrders from './ManageOrders/ManageOrders';
 import ManageProducts from './ManageProducts/ManageProducts';
 import useAuth from '../../hooks/useAuth';
 import AdminRoute from '../../AdminRoute/AdminRoute';
+import MyOrders from './MyOrders/MyOrders';
+import MakePayment from './MakePayment/MakePayment';
+import Review from './Review/Review';
 
 const DashBoard = () => {
     let { path, url } = useRouteMatch();
@@ -125,6 +128,15 @@ const DashBoard = () => {
                         <AdminRoute path={`${path}/makeAdmin`}>
                             <MakeAdmin></MakeAdmin>
                         </AdminRoute>
+                        <Route path={`${path}/myOrders`}>
+                            <MyOrders></MyOrders>
+                        </Route>
+                        <Route path={`${path}/makePayment`}>
+                            <MakePayment></MakePayment>
+                        </Route>
+                        <Route path={`${path}/review`}>
+                            <Review></Review>
+                        </Route>
 
                     </Switch>
                 </div>
