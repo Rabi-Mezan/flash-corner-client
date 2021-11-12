@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useEffect } from 'react/cjs/react.development';
+import { useEffect } from 'react';
 import useAuth from '../../../hooks/useAuth';
 
 const MyOrders = () => {
@@ -8,7 +8,7 @@ const MyOrders = () => {
     const { user } = useAuth()
 
     useEffect(() => {
-        fetch(`http://localhost:5000/orders/${user?.email}`)
+        fetch(`https://fierce-stream-68374.herokuapp.com/orders/${user?.email}`)
             .then(res => res.json())
             .then(result =>
                 setOrder(result))
@@ -18,7 +18,7 @@ const MyOrders = () => {
     const handleCancle = id => {
         const procedd = window.confirm('Are you sure to cancel the order??')
         if (procedd) {
-            fetch(`http://localhost:5000/orders/${id}`, {
+            fetch(`https://fierce-stream-68374.herokuapp.com/orders/${id}`, {
                 method: 'DELETE',
                 headers: {
                     "content-type": "application/json"
@@ -50,7 +50,7 @@ const MyOrders = () => {
                                 </div>
                                 <div class="lg:w-2/3 p-4">
                                     <h1 class="text-gray-900 font-bold text-2xl">{pd.product.name}</h1>
-                                    <p class="mt-2 text-gray-600 text-sm">{pd.product.description}
+                                    <p class="mt-2 text-gray-600 text-sm">{pd.product.description.slice(0, 50)}...
                                         <span className='ml-5 text-xs text-yellow-400'>
                                             {pd.status}
                                         </span>

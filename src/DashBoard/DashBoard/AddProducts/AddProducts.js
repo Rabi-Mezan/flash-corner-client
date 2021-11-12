@@ -8,7 +8,7 @@ const AddProducts = () => {
     const { register, reset, handleSubmit } = useForm();
     const [isAdded, setIsAdded] = useState(false)
     const onSubmit = data => {
-        fetch('http://localhost:5000/products', {
+        fetch('https://fierce-stream-68374.herokuapp.com/products', {
             method: "POST",
             headers: {
                 "content-type": "application/json"

@@ -15,7 +15,7 @@ const BuyNow = () => {
     const onSubmit = data => {
         data.product = product
         data.status = "pending"
-        fetch('http://localhost:5000/orders', {
+        fetch('https://fierce-stream-68374.herokuapp.com/orders', {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data)
@@ -31,7 +31,7 @@ const BuyNow = () => {
     }
 
     useEffect(() => {
-        fetch(`http://localhost:5000/products/${id}`)
+        fetch(`https://fierce-stream-68374.herokuapp.com/products/${id}`)
             .then(res => res.json())
             .then(data => {
                 setProduct(data);
@@ -64,7 +64,7 @@ const BuyNow = () => {
                         <input placeholder='phone' type="number" {...register("phone")} />
                         <input placeholder='address' type="text" {...register("address")} />
                         <input defaultValue={product?.name} placeholder=' product name' {...register("name")} />
-                        <input value='Proceed' type="submit" />
+                        <input className='cursor-pointer bg-blue-500 text-white border-0' value='Proceed' type="submit" />
                     </form>
                 </div>
 

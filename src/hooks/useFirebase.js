@@ -64,7 +64,7 @@ const useFirebase = () => {
 
     const saveUser = (email, displayName, method) => {
         const user = { email, displayName };
-        fetch('http://localhost:5000/users', {
+        fetch('https://fierce-stream-68374.herokuapp.com/users', {
             method: method,
             headers: {
                 'content-type': 'application/json'
@@ -78,7 +78,7 @@ const useFirebase = () => {
 
     // cheking admin or not
     useEffect(() => {
-        fetch(`http://localhost:5000/users/${user?.email}`)
+        fetch(`https://fierce-stream-68374.herokuapp.com/users/${user?.email}`)
             .then(res => res.json())
             .then(data => setAdmin(data.admin))
     }, [user?.email])

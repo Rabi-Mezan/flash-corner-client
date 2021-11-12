@@ -10,7 +10,7 @@ const MakeAdmin = () => {
     const onSubmit = data => {
         setEmail(data.email)
         const user = { email };
-        fetch('http://localhost:5000/users/admin', {
+        fetch('https://fierce-stream-68374.herokuapp.com/users/admin', {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -35,7 +35,7 @@ const MakeAdmin = () => {
                 }
                 <form className='lg:flex lg:flex-col m-auto lg:w-2/3 w-full  addproducts' onSubmit={handleSubmit(onSubmit)}>
                     <input placeholder='email' {...register("email")} />
-                    <input placeholder='' type="submit" />
+                    <input className='cursor-pointer bg-blue-500 text-white' placeholder='' type="submit" />
                 </form>
             </div>
         </div>

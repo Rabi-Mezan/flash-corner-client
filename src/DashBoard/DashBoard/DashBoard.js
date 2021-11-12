@@ -38,14 +38,14 @@ const DashBoard = () => {
             <div className='dashboard'>
                 <div class="relative bg-white dark:bg-gray-800">
                     <div class="flex flex-col sm:flex-row sm:justify-between ">
-                        <div class="lg:w-72 h-screen bg-blue-100">
-                            <div class="flex items-center justify-start mx-6 mt-10">
+                        <div class="lg:w-72 h-screen bg-blue-300 shadow">
+                            <div class="flex items-center justify-start mx-6 mt-10  ">
 
                             </div>
-                            <nav class="mt-10 lg:px-6 ">
-                                <Link to='/home' class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " >
+                            <nav class="mt-10 lg:px-6 t">
+                                <Link to='/home' class="hover:text-gray-800 hover:bg-gray-100   flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-500  text-gray-600 dark:text-gray-400 rounded-lg " >
 
-                                    <span class="lg:mx-4 lg:text-lg text-xs font-normal">
+                                    <span class="lg:mx-4 lg:text-lg text-xs  font-semibold">
                                         Home
                                     </span>
                                     <span class="flex-grow text-right">
@@ -55,7 +55,7 @@ const DashBoard = () => {
                                     admin ? <div>
                                         <Link to={`${url}/addProduct`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " >
 
-                                            <span class="lg:mx-4 lg:text-lg text-xs font-normal">
+                                            <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
                                                 Add A Product
                                             </span>
                                             <span class="flex-grow text-right">
@@ -63,7 +63,7 @@ const DashBoard = () => {
                                         </Link>
                                         <Link to={`${url}/manageProducts`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-800 dark:text-gray-100 rounded-lg  dark:bg-gray-600" >
 
-                                            <span class="lg:mx-4 lg:text-lg text-xs font-normal">
+                                            <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
                                                 Manage Products
                                             </span>
                                             <span class="flex-grow text-right">
@@ -71,14 +71,14 @@ const DashBoard = () => {
                                         </Link>
                                         <Link to={`${url}/manageOrders`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg ">
 
-                                            <span class="lg:mx-4 lg:text-lg text-xs font-normal">
+                                            <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
                                                 Manage All Orders
                                             </span>
 
                                         </Link>
                                         <Link to={`${url}/makeAdmin`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " >
 
-                                            <span class="lg:mx-4 lg:text-lg text-xs font-normal">
+                                            <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
                                                 Make Admin
                                             </span>
                                             <span class="flex-grow text-right">
@@ -89,7 +89,7 @@ const DashBoard = () => {
                                         <div>
                                             <Link to={`${url}/myOrders`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " >
 
-                                                <span class="lg:mx-4 lg:text-lg text-xs font-normal">
+                                                <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
                                                     My Orders
                                                 </span>
                                                 <span class="flex-grow text-right">
@@ -97,7 +97,7 @@ const DashBoard = () => {
                                             </Link>
                                             <Link to={`${url}/makePayment`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-800 dark:text-gray-100 rounded-lg  dark:bg-gray-600" >
 
-                                                <span class="lg:mx-4 lg:text-lg text-xs font-normal">
+                                                <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
                                                     Make Payment
                                                 </span>
                                                 <span class="flex-grow text-right">
@@ -105,7 +105,7 @@ const DashBoard = () => {
                                             </Link>
                                             <Link to={`${url}/review`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg ">
 
-                                                <span class="lg:mx-4 lg:text-lg text-xs font-normal">
+                                                <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
                                                     Review
                                                 </span>
 
@@ -113,9 +113,9 @@ const DashBoard = () => {
 
                                         </div>
                                 }
-                                < button onClick={handleLogout} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors  dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " >
+                                < button onClick={handleLogout} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg w-full" >
 
-                                    <span class="lg:mx-4 lg:text-lg text-xs font-normal">
+                                    <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
                                         Logout
                                     </span>
                                     <span class="flex-grow text-right">
