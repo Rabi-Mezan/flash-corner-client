@@ -55,7 +55,7 @@ const MyOrders = () => {
                                     <div class="lg:w-2/3 p-4">
                                         <h1 class="text-gray-900 font-bold text-2xl">{pd.product.name}</h1>
                                         <p class="mt-2 text-gray-600 text-sm">{pd.product.description.slice(0, 50)}...
-                                            <span className='ml-5 text-xs text-yellow-400'>
+                                            <span className={pd.status === "shipped" ? 'ml-5 text-xs text-green-500' : 'ml-5 text-xs text-yellow-400'}>
                                                 {pd.status}
                                             </span>
                                         </p>
