@@ -26,6 +26,7 @@ const BuyNow = () => {
             .then(result => {
                 if (result.insertedId) {
                     setSuccess(true)
+                    alert('order placed Successfully')
                     reset();
                     history.push('/dashboard')
                 }

@@ -12,7 +12,7 @@ const MyOrders = () => {
             .then(res => res.json())
             .then(result =>
                 setOrder(result))
-    }, [control])
+    }, [control, order])
 
 
     const handleCancle = id => {

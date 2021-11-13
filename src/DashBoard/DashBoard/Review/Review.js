@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
+import Success from '../../../AlertCompo/Success/Success';
 import useAuth from '../../../hooks/useAuth';
 
 
 const Review = () => {
-
     const { user } = useAuth()
     const { register, handleSubmit } = useForm();
+    const [success, setSuccess] = useState(false)
     const onSubmit = data => {
         data.email = user.email
         fetch('https://fierce-stream-68374.herokuapp.com/users/review', {
@@ -17,11 +18,21 @@ const Review = () => {
             body: JSON.stringify(data)
         })
             .then(res => res.json())
-            .then(result => console.log(result))
+            .then(result => {
+                if (result.acknowledged) {
+                    setSuccess(true)
+                }
+                else {
+                    setSuccess(false)
+                }
+            })
     };
     return (
         <div>
             <h1 className='font-bebas-neue uppercase lg:text-4xl text-xl font-black flex my-8 flex-col leading-none dark:text-white text-gray-600 '>Leave Us A Feedback</h1>
+            {
+                success && <Success></Success>
+            }
 
             <div>
                 <form className='lg:flex lg:flex-col m-auto lg:w-2/3 w-full  addproducts' onSubmit={handleSubmit(onSubmit)}>

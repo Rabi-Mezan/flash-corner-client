@@ -106,7 +106,7 @@ const DashBoard = () => {
                                             <Link to={`${url}/review`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg ">
 
                                                 <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
-                                                    Review
+                                                    Feedback
                                                 </span>
 
                                             </Link>

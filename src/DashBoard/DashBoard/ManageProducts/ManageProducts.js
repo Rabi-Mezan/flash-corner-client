@@ -41,9 +41,9 @@ const ManageProducts = () => {
 
             <div>
                 <div>
-                    <div class="px-3 py-4 flex justify-center">
-                        <table class="w-full text-md bg-white shadow-md rounded mb-4">
-                            <tbody>
+                    <div class="px-3 py-4  flex justify-center">
+                        <table class="w-full    text-md bg-white shadow-md rounded mb-4">
+                            <tbody className=''>
                                 <tr class="border-b">
                                     <th class="text-left p-3 px-5">Product Id</th>
                                     <th class="text-left p-3 px-5">Product Name</th>

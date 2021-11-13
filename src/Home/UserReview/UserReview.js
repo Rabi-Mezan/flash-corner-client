@@ -21,15 +21,15 @@ const UserReview = () => {
                 What Our Customers Say !
             </h1>
             <p className='lg:text-sm text-xs mb-12 lg:w-full w-2/3 m-auto '>If you have any feedback you can leave it here </p>
-            <div className='grid lg:grid-cols-3 grid-cols-1 '>
+            <div className='grid lg:grid-cols-3 gap-1 grid-cols-1 '>
                 {
                     reviews.map(r =>
                         <div >
                             <div class="  grid items-center justify-center">
-                                <div class="p-3 h-40 my-3  bg-white flex items-center rounded-lg shadow-md hover:scale-105 transition transform duration-500 ">
+                                <div class="p-3 h-40 my-3  bg-gray-300 flex items-center rounded-lg hover:scale-105 transition transform duration-500 ">
                                     <div className='flex flex-col justify-center items-center'>
 
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600 -mt-10 border-2 border-gray-400 rounded-full p-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-indigo-600  border-2 border-white rounded-full p-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
                                         </svg>
                                         <h1 class="lg:text-xl font-bold text-gray-700 mb-2">Mr. {r?.displayName}</h1>
