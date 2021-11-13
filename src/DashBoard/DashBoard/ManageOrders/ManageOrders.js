@@ -6,13 +6,13 @@ const ManageOrders = () => {
     const [control, setControl] = useState(false)
 
     useEffect(() => {
-        fetch('http://localhost:5000/orders')
+        fetch('https://fierce-stream-68374.herokuapp.com/orders')
             .then(res => res.json())
             .then(data => setOrders(data))
     }, [control])
 
     const handleUpdate = id => {
-        fetch(`http://localhost:5000/orders/${id}`, {
+        fetch(`https://fierce-stream-68374.herokuapp.com/orders/${id}`, {
             method: "PUT",
             headers: {
                 "content-type": "application/json"

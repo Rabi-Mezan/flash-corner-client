@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Product from '../../../Home/Product/Product';
+
 
 const ManageProducts = () => {
     const [products, setProducts] = useState([])
@@ -15,7 +15,7 @@ const ManageProducts = () => {
     const handleDelete = id => {
         const procedd = window.confirm('Are you sure to cancel the order??')
         if (procedd) {
-            fetch(`http://localhost:5000/products/${id}`, {
+            fetch(`https://fierce-stream-68374.herokuapp.com/products/${id}`, {
                 method: 'DELETE',
                 headers: {
                     "content-type": "application/json"

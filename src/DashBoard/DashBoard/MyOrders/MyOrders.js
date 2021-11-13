@@ -48,7 +48,7 @@ const MyOrders = () => {
                     {
                         order.map(pd => <div className=''>
                             <div class="p-3" >
-                                <div class="lg:flex max-w-md bg-white shadow-lg rounded-lg overflow-hidden" style={{ minHeight: '200px' }}>
+                                <div class="lg:flex  bg-white shadow-lg rounded-lg  overflow-hidden" style={{ minHeight: '200px' }}>
                                     <div class="lg:w-1/3 p-3 bg-cover">
                                         <img src={pd.product.img} alt="" />
                                     </div>
@@ -61,9 +61,9 @@ const MyOrders = () => {
                                         </p>
 
                                         <div class="flex items-center justify-around mt-5 ">
-                                            <h1 class="text-gray-700 font-bold text-xl">৳{pd.product.price}</h1>
+                                            <h1 class="text-gray-700 font-bold lg:text-xl">৳{pd.product.price}</h1>
 
-                                            <button onClick={() => handleCancle(pd._id)} class="px-3 py-2 bg-gray-800 text-white text-xs font-bold uppercase rounded">Cancel</button>
+                                            <button onClick={() => handleCancle(pd._id)} class="lg:px-3 p-1 lg:py-2 bg-gray-800 text-white text-xs lg:font-bold uppercase rounded">Cancel</button>
                                         </div>
                                     </div>
                                 </div>

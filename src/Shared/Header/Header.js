@@ -16,7 +16,7 @@ const Header = () => {
                         <div class="flex items-center lg:justify-between h-16">
                             <div class=" flex items-center">
                                 <Link class="flex-shrink-0" to='/home'>
-                                    <img class="lg: w-1/3" src={logo} alt="Workflow" />
+                                    <img class="w-1/3 " src={logo} alt="Workflow" />
                                 </Link>
                                 <div class="hidden md:block">
                                     <div class="ml-10 flex items-baseline space-x-4">
