@@ -11,7 +11,7 @@ const Products = () => {
     }, [])
     return (
         <div className='my-14'>
-            <h1 class="font-bebas-neue uppercase text-4xl text-xl font-black flex flex-col leading-none dark:text-white text-gray-800">
+            <h1 class="font-bebas-neue uppercase lg:text-4xl text-xl font-black flex flex-col leading-none dark:text-white text-gray-800">
                 Recent Products
             </h1>
             <div className='grid lg:grid-cols-3 md:grid-cols-1 '>

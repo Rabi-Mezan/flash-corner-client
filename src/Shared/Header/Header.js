@@ -12,8 +12,8 @@ const Header = () => {
 
             <div>
                 <nav class="bg-gray-700 dark:bg-gray-800  shadow py-4 ">
-                    <div class="max-w-7xl mx-auto px-8">
-                        <div class="flex items-center justify-between h-16">
+                    <div class="lg:max-w-7xl mx-auto px-8">
+                        <div class="flex items-center lg:justify-between h-16">
                             <div class=" flex items-center">
                                 <Link class="flex-shrink-0" to='/home'>
                                     <img class="lg: w-1/3" src={logo} alt="Workflow" />

@@ -64,7 +64,7 @@ const BuyNow = () => {
                         <input placeholder='phone' type="number" {...register("phone")} />
                         <input placeholder='address' type="text" {...register("address")} />
                         <input defaultValue={product?.name} placeholder=' product name' {...register("name")} />
-                        <input className='cursor-pointer bg-blue-500 text-white border-0' value='Proceed' type="submit" />
+                        <input className='cursor-pointer bg-blue-500 text-white' value='Proceed' type="submit" />
                     </form>
                 </div>
 

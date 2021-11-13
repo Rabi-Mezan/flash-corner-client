@@ -37,7 +37,7 @@ const DashBoard = () => {
             </div>
             <div className='dashboard'>
                 <div class="relative bg-white dark:bg-gray-800">
-                    <div class="flex flex-col sm:flex-row sm:justify-between ">
+                    <div class="grid flex-col sm:flex-row sm:justify-between ">
                         <div class="lg:w-72 h-screen bg-blue-300 shadow">
                             <div class="flex items-center justify-start mx-6 mt-10  ">
 
@@ -56,7 +56,7 @@ const DashBoard = () => {
                                         <Link to={`${url}/addProduct`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg " >
 
                                             <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
-                                                Add A Product
+                                                Add  Products
                                             </span>
                                             <span class="flex-grow text-right">
                                             </span>
@@ -64,7 +64,7 @@ const DashBoard = () => {
                                         <Link to={`${url}/manageProducts`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-800 dark:text-gray-100 rounded-lg  dark:bg-gray-600" >
 
                                             <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
-                                                Manage Products
+                                                Manage All Products
                                             </span>
                                             <span class="flex-grow text-right">
                                             </span>

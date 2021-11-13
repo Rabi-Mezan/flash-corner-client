@@ -15,7 +15,7 @@ const Shop = () => {
         <div>
             <Header></Header>
             <div className=' my-20'>
-                <h1 className='font-bebas-neue uppercase lg:text-4xl text-xl font-black flex my-8 flex-col leading-none dark:text-white text-gray-600 '>Find All Our Products Here</h1>
+                <h1 className='font-bebas-neue uppercase lg:text-4xl text-md font-black flex my-8 flex-col leading-none dark:text-white text-gray-600 '>Find All Our Products Here</h1>
 
                 <div class="w-60 m-auto h-10 pl-3 pr-2 bg-white border rounded-full flex justify-between items-center relative">
                     <input type="search" name="search" id="search" placeholder="Search"
