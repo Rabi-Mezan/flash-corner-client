@@ -24,6 +24,9 @@ const MakeAdmin = () => {
                     setSuccess(true);
                     reset()
                 }
+                else {
+                    setSuccess(false)
+                }
             })
     }
     return (

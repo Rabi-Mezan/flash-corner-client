@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { useHistory, useParams } from 'react-router';
+import Success from '../AlertCompo/Success/Success';
 import useAuth from '../hooks/useAuth';
 import Header from '../Shared/Header/Header';
 
@@ -10,6 +11,7 @@ const BuyNow = () => {
     const { user } = useAuth()
     const [product, setProduct] = useState({});
     const history = useHistory()
+    const [success, setSuccess] = useState(false)
 
 
     const onSubmit = data => {
@@ -23,9 +25,12 @@ const BuyNow = () => {
             .then(res => res.json())
             .then(result => {
                 if (result.insertedId) {
-                    alert('Order Placed Successfull')
+                    setSuccess(true)
                     reset();
-                    history.push('/shopNow')
+                    history.push('/dashboard')
+                }
+                else {
+                    setSuccess(false)
                 }
             })
     }
@@ -58,6 +63,7 @@ const BuyNow = () => {
 
                 <div className='flex flex-col items-center'>
                     <h1 className='lg:text-3xl mt-10  font-bold text-center'>Almost Ready To Buy..</h1>
+                    {success && <Success></Success>}
                     <form className='lg:flex lg:flex-col m-auto lg:w-2/3 w-full  addproducts' onSubmit={handleSubmit(onSubmit)}>
                         <input value={user.displayName} placeholder='User name' {...register("username")} />
                         <input value={user.email} placeholder='email' {...register("email")} />

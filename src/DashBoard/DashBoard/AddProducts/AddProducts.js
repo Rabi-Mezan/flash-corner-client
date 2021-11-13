@@ -35,7 +35,7 @@ const AddProducts = () => {
                 <input className='' style={{ height: '80px' }} placeholder='description' {...register("description")} />
                 <input placeholder='price' type="number" {...register("price")} />
                 <input placeholder='image link'  {...register("img")} />
-                <input placeholder='' type="submit" />
+                <input className='cursor-pointer bg-blue-500 text-white' placeholder='' type="submit" />
             </form>
         </div>
     );

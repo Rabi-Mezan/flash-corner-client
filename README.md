@@ -1,6 +1,6 @@
 # Flash Corner
 
-This project was bootstrapped with [Create React App](https://flash-corner.web.app).
+You can visite here to see preview [Live Site Link](https://flash-corner.web.app).
 
 ## Short Description
 
