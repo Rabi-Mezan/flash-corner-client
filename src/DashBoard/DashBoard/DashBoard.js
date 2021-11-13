@@ -98,7 +98,7 @@ const DashBoard = () => {
                                             <Link to={`${url}/makePayment`} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-800 dark:text-gray-100 rounded-lg  dark:bg-gray-600" >
 
                                                 <span class="lg:mx-4 lg:text-lg text-xs font-semibold">
-                                                    Make Payment
+                                                    Payment
                                                 </span>
                                                 <span class="flex-grow text-right">
                                                 </span>
@@ -113,6 +113,7 @@ const DashBoard = () => {
 
                                         </div>
                                 }
+                                <hr />
                                 < button onClick={handleLogout} class="hover:text-gray-800 hover:bg-gray-100 flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-200  text-gray-600 dark:text-gray-400 rounded-lg w-full" >
 
                                     <span class="lg:mx-4 lg:text-lg text-xs font-semibold">

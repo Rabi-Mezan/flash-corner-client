@@ -1,11 +1,12 @@
 import React from 'react';
+import img from '../../../images/Under construction-cuate.png'
 
 const MakePayment = () => {
 
     return (
-        <div className='my-20' >
-            <h1 className='font-bebas-neue uppercase  lg:text-8xl font-black  leading-none dark:text-white text-gray-800' >Payment Method Comming Soon!!</h1>
-
+        <div className='my-10' >
+            <h1 className='font-bebas-neue uppercase  lg:text-3xl font-black  leading-none dark:text-white text-gray-800' >This Feature Is Under Construction!</h1>
+            <img className='lg:w-2/3 m-auto' src={img} alt="" />
         </div>
     );
 };

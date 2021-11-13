@@ -91,7 +91,7 @@ const Login = () => {
                         <Link to='/register' class="text-base text-white text-right font-roboto leading-normal hover:underline mb-6">New here? Create Account</Link>
 
 
-                        <button class="bg-blue-400 w-full py-4 text-center px-17 md:px-12 md:py-4 text-white rounded leading-tight text-xl md:text-base font-sans mt-4 mb-20">
+                        <button class="bg-blue-400 w-full py-4 text-center px-17 md:px-12 md:py-4 text-white rounded leading-tight text-2xl font-semibold md:text-base font-sans mt-4 mb-20">
                             Login
                         </button>
 
