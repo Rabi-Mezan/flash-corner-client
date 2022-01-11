@@ -34,44 +34,55 @@ const ManageOrders = () => {
 
 
     return (
-        <div>
-            <div>
-                <div>
-                    <div class="px-3 py-4 flex justify-center">
-                        <table class="w-full text-md bg-white shadow-md rounded mb-4">
-                            <tbody>
-                                <tr class="border-b">
-                                    <th class="text-left p-3 px-5">Customer Name</th>
-                                    <th class="text-left p-3 px-5">Phone No</th>
-                                    <th class="text-left p-3 px-5">Product Name</th>
-                                    <th class="text-left p-3 px-5">Status</th>
+        <div className='flex flex-col'>
+            <div class="overflow-x-auto sm:-mx-6 lg:-mx-8">
+                <div class="inline-block py-2 min-w-full sm:px-6 lg:px-8">
+                    <div class=" overflow-hidden border-b  border-gray-200 shadow">
+                        <table className='min-w-full'>
+                            <thead class="bg-gray-50">
+                                <tr>
+                                    <th class="px-6 py-2 text-md text-gray-500">
+                                        Customer Name
+                                    </th>
+                                    <th class="px-6 py-2 text-md text-gray-500">
+                                        Phone Number
+                                    </th>
+                                    <th class="px-6 py-2 text-md text-gray-500">
+                                        Product Name
+                                    </th>
+
+                                    <th class="px-6 py-2 text-md text-gray-500">
+                                        Status
+                                    </th>
                                 </tr>
+                            </thead>
+                            <tbody class="bg-white">
                                 {
-                                    orders.map(order =>
-                                        <tr class="border-b hover:bg-orange-100 bg-gray-100">
-                                            <td class="p-3 text-left px-5">
-                                                <input type="text" value={order.username
-                                                } class="bg-transparent" />
+                                    orders.map(od =>
+
+                                        <tr class="whitespace-nowrap">
+                                            <td class="px-6 py-4 text-sm text-gray-500">
+                                                {od.username}
                                             </td>
-                                            <td class="p-3 text-left px-5">
-                                                <input type="text" value={order.phone
-                                                } class="bg-transparent" />
+                                            <td class="px-6 py-4 text-sm text-gray-500">
+                                                {od.phone}
+                                            </td>
+                                            <td class="px-6 py-4">
+                                                <div class="text-sm text-gray-900">
+                                                    {od.name}
+                                                </div>
                                             </td>
 
-                                            <td class="p-3 text-left px-5">
-                                                <input type="text" value={order.name} class="bg-transparent" />
-                                            </td>
 
-                                            <td class="p-3 px-5 flex justify-start"><button onClick={() => handleUpdate(order._id)} type="button" class={order.status === "shipped" ? "text-sm bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline" : "text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"}>{order.status}</button></td>
-                                        </tr>
-                                    )
+                                            <td class="px-6 py-4">
+                                                <button onClick={() => handleUpdate(od._id)} class={od.status === "shipped" ? "text-sm bg-green-500 hover:bg-green-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline" : "text-sm bg-red-500 hover:bg-red-700 text-white py-1 px-2 rounded focus:outline-none focus:shadow-outline"}>{od.status}</button>
+                                            </td>
+                                        </tr>)
                                 }
-
                             </tbody>
                         </table>
                     </div>
                 </div>
-
             </div>
         </div>
     );

@@ -17,8 +17,8 @@ const Shop = () => {
             <div className=' my-20'>
                 <h1 className='font-bebas-neue uppercase lg:text-4xl text-md font-black flex my-8 flex-col leading-none dark:text-white text-gray-600 '>Find All Our Products Here</h1>
 
-                <div class="w-60 m-auto h-10 pl-3 pr-2 bg-white border rounded-full flex justify-between items-center relative">
-                    <input type="search" name="search" id="search" placeholder="Search"
+                <div class="lg:w-80 w-60 m-auto h-10 pl-3 pr-2 bg-white border rounded-full flex justify-between items-center relative">
+                    <input type="search" name="search" id="search" placeholder="Search products"
                         class="appearance-none w-full outline-none focus:outline-none active:outline-none" />
                     <button type="submit" class="ml-1 outline-none focus:outline-none active:outline-none">
                         <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -28,7 +28,7 @@ const Shop = () => {
                     </button>
                 </div>
             </div>
-            <div className='grid lg:grid-cols-3 md:grid-cols-1 '>
+            <div className='grid lg:grid-cols-3 md:grid-cols-1 my-5 mx-10 '>
                 {
                     products.map(product =>
 

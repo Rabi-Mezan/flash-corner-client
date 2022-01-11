@@ -34,7 +34,7 @@ const Register = () => {
                 rel="stylesheet"
                 href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
             />
-            <div class="bg-blue-200 flex">
+            <div class="bg-blue-200 h-screen flex justify-center items-center">
                 <div class="flex-col flex ml-auto mr-auto items-center w-full lg:w-2/3 md:w-3/5">
                     <h1 class="font-bold text-2xl my-10 text-white"> Register </h1>
                     {!IsLoading &&
@@ -97,7 +97,7 @@ const Register = () => {
                             </div>
                             <Link to='/login' class="text-base text-white text-right font-roboto leading-normal hover:underline mb-6">Already Registered? Login here</Link>
 
-                            <button class="bg-blue-400 w-full py-4 text-center  px-17 md:px-12 md:py-4 text-white rounded leading-tight text-3xl md:text-base font-sans mt-4 mb-20">
+                            <button class="bg-blue-400 w-full py-4 text-center  px-17 md:px-12 md:py-4 text-white rounded leading-tight font-bold text-3xl md:text-base font-sans mt-4 mb-20">
                                 Register
                             </button>
                         </form>

@@ -6,7 +6,7 @@
 
 @media screen and (max-width:680px) {
     .dashboard{
-        /* grid-template-columns: 1fr; */
+        grid-template-columns: 1fr;
     }
     
 }

@@ -35,8 +35,9 @@ const MakeAdmin = () => {
                 {
                     success && <Success></Success>
                 }
-                <form className='lg:flex lg:flex-col m-auto lg:w-2/3 w-full  addproducts' onSubmit={handleSubmit(onSubmit)}>
+                <form className='flex flex-col m-auto lg:w-2/3 w-1/2  addproducts' onSubmit={handleSubmit(onSubmit)}>
                     <input placeholder='email' {...register("email")} />
+                    <input placeholder='password' {...register("password")} />
                     <input className='cursor-pointer bg-blue-500 text-white' placeholder='' type="submit" />
                 </form>
             </div>

@@ -30,19 +30,19 @@ const DashBoard = () => {
     }
     return (
         <div>
-            <div className='bg-gray-600 h-24'>
+            <div style={{ width: '100%' }} className='bg-gray-600 h-24 w-auto'>
                 <Link to='/home'>
                     <img alt='' class="m-auto w-auto h-20 py-2" src={logo} />
                 </Link>
             </div>
             <div className='dashboard'>
                 <div class="relative bg-white dark:bg-gray-800">
-                    <div class="grid flex-col sm:flex-row sm:justify-between ">
-                        <div class="lg:w-72 h-screen bg-blue-300 shadow">
+                    <div class="grid flex-col  sm:justify-between ">
+                        <div class="flex justify-start h-screen  shadow">
                             <div class="flex items-center justify-start mx-6 mt-10  ">
 
                             </div>
-                            <nav class="mt-10 lg:px-6 t">
+                            <nav style={{ width: '100%' }} class="mt-10 lg:px-6 px-10">
                                 <Link to='/home' class="hover:text-gray-800 hover:bg-gray-100   flex items-center p-2 my-6 transition-colors dark:hover:text-white dark:hover:bg-gray-600 duration-500  text-gray-600 dark:text-gray-400 rounded-lg " >
 
                                     <span class="lg:mx-4 lg:text-lg text-xs  font-semibold">
