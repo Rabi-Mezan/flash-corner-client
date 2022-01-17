@@ -1,11 +1,17 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Services.css'
 
 const Services = () => {
     return (
-        <div className=' services my-20 ' >
-            <div>
-                <h1 className='font-bebas-neue uppercase lg:text-4xl text-xl font-black flex my-8 flex-col leading-none dark:text-white text-gray-900 '>Our Qualities</h1>
+        <div className=' services my-40 ' >
+            <div className='lg:ml-20'>
+                <h1 className='font-bebas-neue uppercase lg:text-5xl text-xl font-black flex flex-col leading-none dark:text-white text-gray-900 lg:text-left text-center'>Our Qualities</h1>
+                <p className='text-sm my-6  lg:text-left text-center '>Scan photos with the same ease that you scan documents using an automatic feeder to quickly tackle large stacks of photos. Save your images and share them with family and friends.</p>
+                <Link to="/home" class="uppercase  py-2 px-4 rounded-lg bg-pink-500 border-2 border-transparent text-white text-md ml-0 text-center lg:flex justify-start w-1/2 hover:bg-blue-500">
+
+                    See All Services
+                </Link>
             </div>
             <div className='flex flex-col justify-center items-center my-10'>
                 <div class="grid lg:grid-cols-2 md:grid-cols-1 gap-4">

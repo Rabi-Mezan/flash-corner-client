@@ -16,11 +16,11 @@ const UserReview = () => {
 
 
     return (
-        <div className='h-auto mt-24 mb-10' >
-            <h1 class="font-bebas-neue uppercase lg:text-4xl text-md font-black flex flex-col leading-none dark:text-white text-gray-800 my-5 ">
+        <div className='h-auto my-40 ' >
+            <h1 class="font-bebas-neue uppercase lg:text-5xl text-md font-black flex flex-col leading-none dark:text-white text-gray-800 my-5 ">
                 What Our Customers Say !
             </h1>
-            <p className='lg:text-sm text-xs mb-12 lg:w-full w-2/3 m-auto '>If you have any feedback you can leave it here </p>
+            <p className='lg:text-sm text-xs mb-12 w-full lg:w-2/3 m-auto '>If you have any feedback you can leave it here.Customer reviews are pieces of feedback given to a business based on a customer's experience with the organization. These reviews can be public or private and are collected by either the company or third-party review sites. By obtaining and analyzing customer reviews, businesses can measure customer satisfaction and improve their customer relations. </p>
             <div className='grid lg:grid-cols-3 gap-1 grid-cols-1 '>
                 {
                     reviews.map(r =>

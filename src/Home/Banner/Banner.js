@@ -13,12 +13,12 @@ const Banner = () => {
                             <span class="w-20 h-2 bg-gray-800 dark:bg-white mb-12">
                             </span>
                             <h1 class="font-bebas-neue uppercase text-6xl sm:text-8xl font-black flex flex-col leading-none dark:text-white text-gray-800">
-                                Buy A
+                                Buy Your
                                 <span class="text-5xl sm:text-7xl">
-                                    Dream
+                                    First   Dream
                                 </span>
                             </h1>
-                            <p class="text-sm sm:text-base text-gray-700 dark:text-white my-4">
+                            <p class="text-sm sm:text-base text-gray-700 dark:text-white my-5">
                                 Dimension of reality that makes change possible and understandable. An indefinite and homogeneous environment in which natural events and human existence take place.
                             </p>
                             <div class="flex  m-auto">
@@ -32,7 +32,10 @@ const Banner = () => {
                             </div>
                         </div>
                         <div class="hidden sm:block sm:w-1/3 lg:w-3/5 relative ml-20">
-                            <img className='lg:w-2/3' src="https://purepng.com/public/uploads/large/nikon-camera-ato.png" alt='' />
+                            <div className='rounded-lg p-2  border-gray-700 bg-gradient-to-l from-gray-400 h-96 blur-2xl'>
+
+                            </div>
+                            <img className='lg:w-2/3 relative bottom-60 left-20 blur-md' src="https://purepng.com/public/uploads/large/nikon-camera-ato.png" alt='' />
                         </div>
                     </div>
                 </div>
